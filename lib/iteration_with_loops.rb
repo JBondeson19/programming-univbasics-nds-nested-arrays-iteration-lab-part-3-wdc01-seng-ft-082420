@@ -6,8 +6,8 @@ def join_nested_strings(src)
     string_elements = ""
     while element_index < src[row_index].count do
 
-        if src[row_index][element_index]
-          src.flatten.select {|item| item.is_a? string}.join string_elements
+        if src[row_index][element_index].is_a? string
+          
           string_result << src[row_index][element_index]
 
         element_index
